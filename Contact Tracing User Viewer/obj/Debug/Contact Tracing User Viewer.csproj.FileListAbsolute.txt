@@ -1,0 +1,10 @@
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\bin\Debug\Contact Tracing User Viewer.exe.config
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\bin\Debug\Contact Tracing User Viewer.exe
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\bin\Debug\Contact Tracing User Viewer.pdb
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact Tracing User Viewer.csproj.AssemblyReference.cache
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact_Tracing_User_Viewer.Form1.resources
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact_Tracing_User_Viewer.Properties.Resources.resources
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact Tracing User Viewer.csproj.GenerateResource.cache
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact Tracing User Viewer.csproj.CoreCompileInputs.cache
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact Tracing User Viewer.exe
+C:\Users\Jv Cataquiz\source\repos\Assignment5\Contact Tracing User Viewer\obj\Debug\Contact Tracing User Viewer.pdb
