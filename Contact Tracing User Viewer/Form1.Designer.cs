@@ -42,9 +42,13 @@ namespace Contact_Tracing_User_Viewer
             this.buttonNext = new System.Windows.Forms.Button();
             this.panelWelcome = new System.Windows.Forms.Panel();
             this.panelfilehandling = new System.Windows.Forms.Panel();
-            this.labeltextfilename = new System.Windows.Forms.Label();
-            this.textBoxsearch = new System.Windows.Forms.TextBox();
+            this.buttonAll = new System.Windows.Forms.Button();
             this.buttonsearch2 = new System.Windows.Forms.Button();
+            this.textBoxsearch = new System.Windows.Forms.TextBox();
+            this.labeltextfilename = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxMi = new System.Windows.Forms.TextBox();
+            this.listBoxView = new System.Windows.Forms.ListBox();
             this.panelWelcome.SuspendLayout();
             this.panelfilehandling.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +58,7 @@ namespace Contact_Tracing_User_Viewer
             this.richTextBoxdisplay.Dock = System.Windows.Forms.DockStyle.Left;
             this.richTextBoxdisplay.Location = new System.Drawing.Point(342, 0);
             this.richTextBoxdisplay.Name = "richTextBoxdisplay";
-            this.richTextBoxdisplay.Size = new System.Drawing.Size(281, 469);
+            this.richTextBoxdisplay.Size = new System.Drawing.Size(405, 469);
             this.richTextBoxdisplay.TabIndex = 10;
             this.richTextBoxdisplay.Text = "";
             this.richTextBoxdisplay.Visible = false;
@@ -72,24 +76,24 @@ namespace Contact_Tracing_User_Viewer
             // textBoxLN
             // 
             this.textBoxLN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBoxLN.Location = new System.Drawing.Point(13, 194);
+            this.textBoxLN.Location = new System.Drawing.Point(13, 325);
             this.textBoxLN.Name = "textBoxLN";
-            this.textBoxLN.Size = new System.Drawing.Size(122, 23);
+            this.textBoxLN.Size = new System.Drawing.Size(103, 23);
             this.textBoxLN.TabIndex = 1;
             this.textBoxLN.TabStop = false;
             // 
             // textBoxFN
             // 
             this.textBoxFN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBoxFN.Location = new System.Drawing.Point(141, 194);
+            this.textBoxFN.Location = new System.Drawing.Point(122, 325);
             this.textBoxFN.Name = "textBoxFN";
-            this.textBoxFN.Size = new System.Drawing.Size(107, 23);
+            this.textBoxFN.Size = new System.Drawing.Size(70, 23);
             this.textBoxFN.TabIndex = 2;
             this.textBoxFN.TabStop = false;
             // 
             // btnsearch
             // 
-            this.btnsearch.Location = new System.Drawing.Point(254, 194);
+            this.btnsearch.Location = new System.Drawing.Point(254, 325);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(75, 23);
             this.btnsearch.TabIndex = 3;
@@ -101,7 +105,7 @@ namespace Contact_Tracing_User_Viewer
             // labelln
             // 
             this.labelln.AutoSize = true;
-            this.labelln.Location = new System.Drawing.Point(11, 222);
+            this.labelln.Location = new System.Drawing.Point(11, 353);
             this.labelln.Name = "labelln";
             this.labelln.Size = new System.Drawing.Size(68, 13);
             this.labelln.TabIndex = 4;
@@ -110,7 +114,7 @@ namespace Contact_Tracing_User_Viewer
             // labelfn
             // 
             this.labelfn.AutoSize = true;
-            this.labelfn.Location = new System.Drawing.Point(139, 222);
+            this.labelfn.Location = new System.Drawing.Point(120, 353);
             this.labelfn.Name = "labelfn";
             this.labelfn.Size = new System.Drawing.Size(72, 13);
             this.labelfn.TabIndex = 5;
@@ -120,7 +124,7 @@ namespace Contact_Tracing_User_Viewer
             // 
             this.labelresult.AutoSize = true;
             this.labelresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelresult.Location = new System.Drawing.Point(12, 53);
+            this.labelresult.Location = new System.Drawing.Point(12, 196);
             this.labelresult.Name = "labelresult";
             this.labelresult.Size = new System.Drawing.Size(73, 18);
             this.labelresult.TabIndex = 7;
@@ -129,7 +133,7 @@ namespace Contact_Tracing_User_Viewer
             // textBoxResult
             // 
             this.textBoxResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.textBoxResult.Location = new System.Drawing.Point(15, 80);
+            this.textBoxResult.Location = new System.Drawing.Point(15, 223);
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.Size = new System.Drawing.Size(313, 46);
             this.textBoxResult.TabIndex = 8;
@@ -137,7 +141,7 @@ namespace Contact_Tracing_User_Viewer
             // 
             // buttonclear
             // 
-            this.buttonclear.Location = new System.Drawing.Point(253, 132);
+            this.buttonclear.Location = new System.Drawing.Point(253, 275);
             this.buttonclear.Name = "buttonclear";
             this.buttonclear.Size = new System.Drawing.Size(75, 23);
             this.buttonclear.TabIndex = 9;
@@ -160,7 +164,7 @@ namespace Contact_Tracing_User_Viewer
             // 
             // panelWelcome
             // 
-            this.panelWelcome.BackColor = System.Drawing.Color.Aquamarine;
+            this.panelWelcome.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelWelcome.Controls.Add(this.buttonNext);
             this.panelWelcome.Controls.Add(this.panelfilehandling);
             this.panelWelcome.Controls.Add(this.buttonclear);
@@ -172,6 +176,9 @@ namespace Contact_Tracing_User_Viewer
             this.panelWelcome.Controls.Add(this.textBoxFN);
             this.panelWelcome.Controls.Add(this.textBoxLN);
             this.panelWelcome.Controls.Add(this.label1);
+            this.panelWelcome.Controls.Add(this.label2);
+            this.panelWelcome.Controls.Add(this.textBoxMi);
+            this.panelWelcome.Controls.Add(this.listBoxView);
             this.panelWelcome.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelWelcome.Location = new System.Drawing.Point(0, 0);
             this.panelWelcome.Name = "panelWelcome";
@@ -180,14 +187,47 @@ namespace Contact_Tracing_User_Viewer
             // 
             // panelfilehandling
             // 
+            this.panelfilehandling.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelfilehandling.Controls.Add(this.buttonAll);
             this.panelfilehandling.Controls.Add(this.buttonsearch2);
             this.panelfilehandling.Controls.Add(this.textBoxsearch);
             this.panelfilehandling.Controls.Add(this.labeltextfilename);
-            this.panelfilehandling.Location = new System.Drawing.Point(0, 29);
+            this.panelfilehandling.Location = new System.Drawing.Point(-3, 27);
             this.panelfilehandling.Name = "panelfilehandling";
-            this.panelfilehandling.Size = new System.Drawing.Size(342, 440);
+            this.panelfilehandling.Size = new System.Drawing.Size(345, 487);
             this.panelfilehandling.TabIndex = 11;
             this.panelfilehandling.Visible = false;
+            // 
+            // buttonAll
+            // 
+            this.buttonAll.Location = new System.Drawing.Point(252, 222);
+            this.buttonAll.Name = "buttonAll";
+            this.buttonAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonAll.TabIndex = 3;
+            this.buttonAll.Text = "All ";
+            this.buttonAll.UseVisualStyleBackColor = true;
+            this.buttonAll.Visible = false;
+            this.buttonAll.Click += new System.EventHandler(this.buttonAll_Click);
+            // 
+            // buttonsearch2
+            // 
+            this.buttonsearch2.Location = new System.Drawing.Point(8, 222);
+            this.buttonsearch2.Name = "buttonsearch2";
+            this.buttonsearch2.Size = new System.Drawing.Size(75, 23);
+            this.buttonsearch2.TabIndex = 2;
+            this.buttonsearch2.Text = "Search";
+            this.buttonsearch2.UseVisualStyleBackColor = true;
+            this.buttonsearch2.Visible = false;
+            this.buttonsearch2.Click += new System.EventHandler(this.buttonsearch2_Click);
+            // 
+            // textBoxsearch
+            // 
+            this.textBoxsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.textBoxsearch.Location = new System.Drawing.Point(8, 184);
+            this.textBoxsearch.Name = "textBoxsearch";
+            this.textBoxsearch.Size = new System.Drawing.Size(320, 31);
+            this.textBoxsearch.TabIndex = 1;
+            this.textBoxsearch.Visible = false;
             // 
             // labeltextfilename
             // 
@@ -200,24 +240,33 @@ namespace Contact_Tracing_User_Viewer
             this.labeltextfilename.Text = "textfile";
             this.labeltextfilename.Visible = false;
             // 
-            // textBoxsearch
+            // label2
             // 
-            this.textBoxsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.textBoxsearch.Location = new System.Drawing.Point(8, 184);
-            this.textBoxsearch.Name = "textBoxsearch";
-            this.textBoxsearch.Size = new System.Drawing.Size(320, 31);
-            this.textBoxsearch.TabIndex = 1;
-            this.textBoxsearch.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(198, 353);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "M.I.";
             // 
-            // buttonsearch2
+            // textBoxMi
             // 
-            this.buttonsearch2.Location = new System.Drawing.Point(8, 222);
-            this.buttonsearch2.Name = "buttonsearch2";
-            this.buttonsearch2.Size = new System.Drawing.Size(75, 23);
-            this.buttonsearch2.TabIndex = 2;
-            this.buttonsearch2.Text = "Search";
-            this.buttonsearch2.UseVisualStyleBackColor = true;
-            this.buttonsearch2.Visible = false;
+            this.textBoxMi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.textBoxMi.Location = new System.Drawing.Point(198, 325);
+            this.textBoxMi.Name = "textBoxMi";
+            this.textBoxMi.Size = new System.Drawing.Size(50, 23);
+            this.textBoxMi.TabIndex = 12;
+            this.textBoxMi.TabStop = false;
+            // 
+            // listBoxView
+            // 
+            this.listBoxView.FormattingEnabled = true;
+            this.listBoxView.Location = new System.Drawing.Point(0, 35);
+            this.listBoxView.Name = "listBoxView";
+            this.listBoxView.Size = new System.Drawing.Size(342, 160);
+            this.listBoxView.TabIndex = 14;
+            this.listBoxView.Click += new System.EventHandler(this.listBoxView_Click);
+            this.listBoxView.SelectedIndexChanged += new System.EventHandler(this.listBoxView_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -228,7 +277,9 @@ namespace Contact_Tracing_User_Viewer
             this.Controls.Add(this.richTextBoxdisplay);
             this.Controls.Add(this.panelWelcome);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelWelcome.ResumeLayout(false);
             this.panelWelcome.PerformLayout();
             this.panelfilehandling.ResumeLayout(false);
@@ -254,6 +305,10 @@ namespace Contact_Tracing_User_Viewer
         private System.Windows.Forms.Button buttonsearch2;
         private System.Windows.Forms.TextBox textBoxsearch;
         private System.Windows.Forms.Label labeltextfilename;
+        private System.Windows.Forms.Button buttonAll;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxMi;
+        private System.Windows.Forms.ListBox listBoxView;
     }
 }
 

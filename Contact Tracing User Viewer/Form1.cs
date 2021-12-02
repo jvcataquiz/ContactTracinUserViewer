@@ -14,6 +14,7 @@ namespace Contact_Tracing_User_Viewer
     public partial class Form1 : Form
     {
         string textfile;
+        string path;
         public Form1()
         {
             InitializeComponent();
@@ -23,9 +24,9 @@ namespace Contact_Tracing_User_Viewer
       
         private void btnsearch_Click(object sender, EventArgs e)
         {
-            StreamReader outputfile;
-            textfile = textBoxLN.Text + " " + textBoxFN.Text + ".txt";
-            string path = @"C:\Users\Jv Cataquiz\output\" + textfile;
+           
+            textfile = textBoxLN.Text + " " + textBoxFN.Text + " " + textBoxMi.Text + ".txt";
+            path = @"C:\Users\Jv Cataquiz\output\" + textfile;
             if (File.Exists(path))
             {
                 textBoxResult.Text = textfile + " ✓";
@@ -45,6 +46,7 @@ namespace Contact_Tracing_User_Viewer
             textBoxResult.Text = "";
             textBoxFN.Text = "";
             textBoxLN.Text = "";
+            textBoxMi.Text = "";
             buttonNext.Visible = false;
         }
 
@@ -62,7 +64,11 @@ namespace Contact_Tracing_User_Viewer
                 textBoxLN.Visible = false;
                 textBoxResult.Visible = false;
                 btnsearch.Visible = false;
+                textBoxMi.Visible = false;
+                label2.Visible = false;
 
+
+                buttonAll.Visible = true;
                 labeltextfilename.Visible = true;
                 richTextBoxdisplay.Visible = true;
                 buttonsearch2.Visible = true;
@@ -81,7 +87,10 @@ namespace Contact_Tracing_User_Viewer
                 textBoxLN.Visible = true;
                 textBoxResult.Visible = true;
                 btnsearch.Visible = true;
+                textBoxMi.Visible = true; 
+                label2.Visible = true;
 
+                buttonAll.Visible = false;
                 labeltextfilename.Visible = false;
                 richTextBoxdisplay.Visible = false;
                 buttonsearch2.Visible = false;
@@ -89,6 +98,56 @@ namespace Contact_Tracing_User_Viewer
                 textBoxsearch.Visible = false;
                 this.ClientSize = new System.Drawing.Size(342, 469);
             }
+
+        }
+
+        private void buttonsearch2_Click(object sender, EventArgs e)
+        {
+            StreamReader readeroutputfile;
+            readeroutputfile = File.OpenText(path);
+            while (!readeroutputfile.EndOfStream)
+            {
+                String currentline = readeroutputfile.ReadLine();
+                if (currentline.Contains(textBoxsearch.Text))
+                {
+                    richTextBoxdisplay.Text = currentline;
+                }
+                
+            }
+        }
+
+        private void buttonAll_Click(object sender, EventArgs e)
+        {
+            string filedata = File.ReadAllText(path);
+            richTextBoxdisplay.Text = filedata;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string[] filepath = Directory.GetFiles(@"C:\Users\Jv Cataquiz\output\", "*.txt");
+            foreach (string file in filepath)
+            {
+                listBoxView.Items.Add(Path.GetFileName(file));
+
+            }
+           
+           
+        }
+
+        private void listBoxView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listBoxView_Click(object sender, EventArgs e)
+        {
+
+            string rep = listBoxView.GetItemText(listBoxView.SelectedItem).Replace(".txt", " ");
+            string[] parts = rep.Split(' ');
+            textBoxLN.Text = parts[0];
+            textBoxFN.Text = parts[1];
+            textBoxMi.Text = parts[2];
+
 
         }
     }
